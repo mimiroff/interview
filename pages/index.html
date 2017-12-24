@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Опрос</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="header_container">
+        <header class="main_header">
+            <div class="logo"></div>
+            <h2 class="corp_name">АО "Корпорация "Стратегические пункты управления"</h2>
+        </header>
+    </div>
+
+    <main class="interview_main">
+        <form class="form greetings" action="action.php" method="post">
+            <div class="form_container">
+                <h3 class="greetings_header">Уважаемые работники Корпорации!</h3>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Ad alias aperiam consequuntur debitis delectus
+                    deleniti distinctio dolor dolorem ducimus, enim impedit labore maiores,
+                    officia, porro quae repellendus tempora tenetur voluptates.</p>
+                <button type="submit" class="button">Начать опрос</button>
+            </div>
+        </form>
+
+        <form class="form question" action="action.php" method="post">
+            <div class="form_container">
+                <p class="text">Нуждаетесь ли Вы в повышении квалификации?</p>
+                <div class="answers_section">
+                    <div class="answer_element">
+                        <input id="answer_0" type="radio" name="answers" value="0" class="answers">
+                        <label for="answer_0">Да
+                            <span class="radio"></span>
+                        </label>
+                    </div>
+                    <div class="answer_element">
+                        <input id="answer_1" type="radio" name="answers" value="1" class="answers">
+                        <label for="answer_1">Нет
+                            <span class="radio"></span>
+                        </label>
+                    </div>
+                    <div class="answer_element">
+                        <input id="answer_2" type="radio" name="answers" value="2" class="answers">
+                        <label for="answer_2">Другое
+                            <span class="radio"></span>
+                        </label>
+                    </div>
+                    <div class="other_field">
+                        <input id="other" type="text" class="other" title="other" disabled>
+                    </div>
+                </div>
+                <button type="submit" class="button" disabled>Ответить</button>
+            </div>
+        </form>
+        <script type="text/javascript" src="../js/form.js"></script>
+    </main>
+</body>
+</html>
