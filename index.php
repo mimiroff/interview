@@ -1,6 +1,5 @@
 <?php
 require_once('functions.php');
-require_once('data.php');
 
 $page_content = renderTemplate('./pages/index.php', ['header' => 'Уважаемые работники Корпорации!',
     'text' => 'Lorem ipsum dolor sit amet, consectetur

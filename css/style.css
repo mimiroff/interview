@@ -14,7 +14,7 @@ html, body {
 }
 
 .header_container {
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
     box-shadow: 0 5px 25px black;
 }
@@ -28,7 +28,7 @@ html, body {
 .main_header {
     margin: 0 auto;
     padding: 20px 0;
-    max-width: 70vw;
+    max-width: 70%;
     font-size: 24px;
 }
 
