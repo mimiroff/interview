@@ -10,7 +10,7 @@ html, body {
     padding: 0;
     font-family: Play;
     background-color: #4de1fb;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .header_container {
@@ -62,7 +62,7 @@ html, body {
 }
 
 .greetings_header {
-    font-size: 20px;
+    font-size: 24px;
     align-self: center;
 }
 
@@ -75,7 +75,7 @@ html, body {
 
 .button {
     font-family: Play;
-    font-size: 18px;
+    font-size: 20px;
     border: 1px solid #4de1fb;
     padding: 20px 40px;
     border-radius: 10px;
@@ -83,7 +83,8 @@ html, body {
     outline: none;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
     background-color: #2b587a;
     border-color: #2b587a;
     color: #fff;
@@ -96,6 +97,10 @@ html, body {
     color: #000;
 }
 
+.submit {
+    visibility: hidden;
+}
+
 .answers_section {
     width: 100%;
     display: flex;
@@ -103,9 +108,11 @@ html, body {
 }
 
 .answer_element {
-    margin: 0 40px;
-    padding-left: 30px;
     text-align: left;
+}
+
+.answer_text {
+    padding-left: 30px;
 }
 
 .answer_element .answers {
@@ -117,30 +124,39 @@ html, body {
 .answer_element label {
     display: block;
     position: relative;
+    outline: none;
 }
 
 .radio {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border: 2px solid #4de1fb;
     border-radius: 3px;
     position: absolute;
-    left: -30px;
-    top: 1px;
+    left: 0;
+    top: 3px;
 }
 
-.answer_element label:hover .radio {
-    border: 2px solid #2b587a;
+.answer_element label:hover .radio,
+.answer_element label:focus .radio,
+.answer_element label:hover .radio,
+.answer_element label:focus .radio {
+    border-color: #fb0000;
+}
+
+.answer_element .answers:checked + label:hover .radio,
+.answer_element .answers:checked + label:focus > .radio {
+    border-color: #fb0000;
 }
 
 .radio::before, .radio::after {
     content: "";
-    width: 12px;
+    width: 18px;
     height: 2px;
-    background-color: #4de1fb;
+    background-color: #2b587a;
     position: absolute;
-    top: 7px;
-    left: 2px;
+    top: 9px;
+    left: 1px;
     display: none;
 }
 
@@ -153,8 +169,10 @@ html, body {
 }
 
 .answer_element label:hover .radio::before,
-.answer_element label:hover .radio::after {
-    background-color: #2b587a;
+.answer_element label:hover .radio::after,
+.answer_element label:focus .radio::before,
+.answer_element label:focus .radio::after{
+    background-color: #fb0000;
 }
 
 .answer_element .answers:checked + label > .radio::before,
@@ -162,13 +180,20 @@ html, body {
     display: block;
 }
 
+.answer_element .answers:checked + label > .radio {
+    border-color: #2b587a;
+}
+
 .other_field {
-    margin: 10px 40px;
+    margin: 10px 0;
 }
 
 .other {
     width: 100%;
     height: 30px;
+    padding-left: 5px;
+    font-family: Play;
+    font-size: 18px;
     border-radius: 5px;
     border: 2px solid #4de1fb;
     box-sizing: border-box;

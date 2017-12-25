@@ -27,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
            $answer = implode('; ', $_POST['checkbox']);
        }
 
-       $other = (string) isset($_POST['other']) ? $_POST['other'] : '';
+       $other = (string) isset($_POST['other']) ? strip_tags($_POST['other']) : '';
+       $other = htmlspecialchars($other);
        $asked_question = $_POST['question'];
        $question_id = (int) get_question_id($link, $asked_question)[0]['id'];
 
