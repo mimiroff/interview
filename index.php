@@ -1,3 +1,3 @@
 <script>
-    window.open('http://interview/start.php', '');
+    window.open('/start.php', '');
 </script>
